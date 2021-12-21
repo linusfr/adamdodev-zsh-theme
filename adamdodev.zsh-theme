@@ -29,6 +29,6 @@ if $ZSH_ADAMDODEV_SHOW_TF_WORKSPACE; then
 fi
 
 RPROMPT="${RPROMPT}"'%b'
-
 PROMPT='%B%F{cyan}%~%f $(git_prompt_info)
+
 → %b'
