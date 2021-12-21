@@ -1,7 +1,11 @@
 function precmd() {
     K8S_CONTEXT=$(kubectl config current-context 2> /dev/null || true)
     TF_WORKSPACE=$(terraform workspace show 2> /dev/null || true)
-    echo
+    precmd() {
+        K8S_CONTEXT=$(kubectl config current-context 2> /dev/null || true)
+        TF_WORKSPACE=$(terraform workspace show 2> /dev/null || true)
+        echo
+    }
 }
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%F{magenta}↳ "
